@@ -1,0 +1,15 @@
+-- You can add your own plugins here or in other files in this directory!
+--  I promise not to create any merge conflicts in this directory :)
+--
+-- See the kickstart.nvim README for more information
+return {
+  'mfussenegger/nvim-dap-python',
+  dependencies = {
+    'mfussenegger/nvim-dap',
+  },
+  config = function()
+    local dapPython = require 'dap-python'
+
+    dapPython.setup '/usr/bin/python'
+  end,
+}
