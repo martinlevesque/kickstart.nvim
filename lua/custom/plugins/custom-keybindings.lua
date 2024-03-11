@@ -1,5 +1,7 @@
 -- for clipboard: sudo apt install xclip
 
+vim.keymap.set('v', '<C-c>', '"+y', { noremap = true })
+
 local builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('i', '<C-p>', "<Esc>:lua require('telescope.builtin').find_files()<CR>", { noremap = true })

@@ -6,16 +6,20 @@ return {
   'mfussenegger/nvim-dap',
   config = function()
     local dap = require 'dap'
+    local dapUi = require 'dapui'
 
     vim.keymap.set('n', '<F5>', function()
+      dapUi.open()
       dap.continue()
     end)
 
     vim.keymap.set('n', '<leader>dt', function()
+      dapUi.close()
       dap.terminate()
     end, { desc = 'Debug Terminate' })
 
     vim.keymap.set('n', '<leader>dr', function()
+      dapUi.open()
       dap.continue()
     end, { desc = 'Debug Run' })
 
