@@ -21,6 +21,13 @@ return {
             ['<leftrelease>'] = 'open', -- This tells neo-tree to use the default filesystem open command on the release of the left mouse button
           },
         },
+        filtered_items = {
+          visible = true,
+          show_hidden_count = true,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          never_show = { '.git', '.idea', '__pycache__' },
+        },
       },
     }
   end,
