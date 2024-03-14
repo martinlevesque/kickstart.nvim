@@ -13,4 +13,9 @@ vim.keymap.set('i', '<C-d>', '<Esc>:Telescope dir live_grep<CR>', { noremap = tr
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save' })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true, desc = 'Save' })
 
+vim.keymap.set('v', '<C-x>', '"+x', { noremap = true })
+vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true })
+vim.keymap.set('n', '<C-z>', 'u', { noremap = true })
+vim.keymap.set('v', '<C-z>', 'u', { noremap = true })
+
 return {}
