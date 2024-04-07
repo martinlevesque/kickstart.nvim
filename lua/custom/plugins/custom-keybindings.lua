@@ -8,6 +8,9 @@ vim.keymap.set('i', '<C-p>', "<Esc>:lua require('telescope.builtin').find_files(
 vim.keymap.set('n', '<C-f>', builtin.live_grep, { desc = '[F]ind in [F]iles' })
 vim.keymap.set('i', '<C-f>', "<Esc>:lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 
+vim.keymap.set('n', '<C-b>', '<cmd>Telescope buffers<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-b>', '<Esc>:Telescope buffers<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<C-d>', '<cmd>Telescope dir live_grep<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-d>', '<Esc>:Telescope dir live_grep<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save' })
